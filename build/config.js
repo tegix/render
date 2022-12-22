@@ -18,26 +18,23 @@
  */
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const fse = require("fs-extra");
-const path = require("path");
-const CONFIG_PATH = path.resolve(__dirname, "../config.json");
 class ConfigManager {
-  static async getConfiguration() {
-    // Load config.json if it exists.
-    if (fse.pathExistsSync(CONFIG_PATH)) {
-      ConfigManager.config = Object.assign(
-        ConfigManager.config,
-        await fse.readJson(CONFIG_PATH)
-      );
+    static async getConfiguration() {
+        // Load config.json if it exists.
+        // if (fse.pathExistsSync(CONFIG_PATH)) {
+        //   ConfigManager.config = Object.assign(
+        //     ConfigManager.config,
+        //     await fse.readJson(CONFIG_PATH)
+        //   );
+        // }
+        return ConfigManager.config;
     }
-    return ConfigManager.config;
-  }
 }
 ConfigManager.config = {
-  datastoreCache: false,
-  timeout: 10000,
-  port: "10000",
-  width: 1000,
-  height: 1000,
+    datastoreCache: false,
+    timeout: 10000,
+    port: "3000",
+    width: 1000,
+    height: 1000,
 };
 exports.ConfigManager = ConfigManager;
