@@ -38,10 +38,10 @@ class Rendertron {
         }));
         this.app.use(route.get("/_ah/health", (ctx) => (ctx.body = "OK")));
         // Optionally enable cache for rendering requests.
-        if (this.config.datastoreCache) {
-            const { DatastoreCache } = await Promise.resolve().then(() => require("./datastore-cache"));
-            this.app.use(new DatastoreCache().middleware());
-        }
+        // if (this.config.datastoreCache) {
+        //   const { DatastoreCache } = await import("./datastore-cache");
+        //   this.app.use(new DatastoreCache().middleware());
+        // }
         this.app.use(route.get("/render/:url(.*)", this.handleRenderRequest.bind(this)));
         this.app.use(route.get("/screenshot/:url(.*)", this.handleScreenshotRequest.bind(this)));
         this.app.use(route.post("/screenshot/:url(.*)", this.handleScreenshotRequest.bind(this)));
