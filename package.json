@@ -4,9 +4,6 @@
   "description": "Renders webpages using headless Chrome for usage by bots",
   "license": "Apache-2.0",
   "repository": "https://github.com/GoogleChrome/rendertron",
-  "engines": {
-    "node": ">=7 <11"
-  },
   "main": "build/rendertron.js",
   "types": "build/rendertron.d.ts",
   "bin": "bin/rendertron",
@@ -38,7 +35,7 @@
     "koa-logger": "^3.2.0",
     "performance-now": "^2.1.0",
     "progress-bar-element": "^2.0.1",
-    "puppeteer": "^1.7.0",
+    "puppeteer": "^19.4.1",
     "semver": "^5.5.1",
     "uuid": "^3.2.1"
   },
