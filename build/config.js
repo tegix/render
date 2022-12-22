@@ -36,7 +36,7 @@ class ConfigManager {
 ConfigManager.config = {
   datastoreCache: false,
   timeout: 10000,
-  port: process.env.PORT ?? "3000",
+  port: "10000",
   width: 1000,
   height: 1000,
 };
