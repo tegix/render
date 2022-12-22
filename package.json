@@ -35,7 +35,7 @@
     "koa-logger": "^3.2.0",
     "performance-now": "^2.1.0",
     "progress-bar-element": "^2.0.1",
-    "puppeteer": "^19.4.1",
+    "puppeteer": "^10.4.0",
     "semver": "^5.5.1",
     "uuid": "^3.2.1"
   },
