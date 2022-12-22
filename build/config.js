@@ -32,7 +32,7 @@ class ConfigManager {
 }
 ConfigManager.config = {
     datastoreCache: false,
-    timeout: 10000,
+    timeout: 30000,
     port: "3000",
     width: 1000,
     height: 1000,
